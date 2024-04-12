@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+span{
+    background: url(https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-256.png);/*use iconfinder.com to find a heart icon copy image address*/
+    width: 100px;
+    height: 100px;/*gives width and height to heart icon*/
+    position: absolute;/*places heart in view a little*/
+    pointer-events: none;/*fixes js to work correctly after adding the spanEl*/
+    background-size: cover;/*places the hole icon into width and height*/
+    left: 50%;/*moves to the right center*/
+    top: 50%;/*moves down center*/
+    transform: translate(-50%, -50%);/*places heart exactly in the middle*/
+    animation: animate 6s linear;
+}
+/*sets the animation*/
+@keyframes animate{
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100%{
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
